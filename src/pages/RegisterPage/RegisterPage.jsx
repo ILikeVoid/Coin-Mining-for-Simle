@@ -52,15 +52,17 @@ const RegisterPage = () => {
                         </div>
                         <div className="row">
                             <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
-                                <div className="mb-3"><input style={errors.login ? {borderColor: "red"} : null} type="email"
-                                            placeholder="Enter your EMail address" {...register("login", {
+                                <div className="mb-3"><input style={errors.login ? {borderColor: "red"} : null}
+                                                             type="email"
+                                                             placeholder="Enter your EMail address" {...register("login", {
                                     required: true,
                                     pattern: {
                                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                         message: "Invalid email address"
                                     }
                                 })}/>
-                                    {errors.login ? <div className="text-danger fw-bold">{errors.login.message}</div> : null}
+                                    {errors.login ?
+                                        <div className="text-danger fw-bold">{errors.login.message}</div> : null}
                                 </div>
                                 <div><input className="mb-4" type="password"
                                             placeholder="Enter your password" {...register("password", {required: true})}/>

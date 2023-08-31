@@ -22,11 +22,11 @@ const DashHeader = () => {
         setInterval(updateTime, 1000)
     }, [])
 
-    useEffect(() => {
-        if (!isAuth) {
-            navigate('/login')
-        }
-    }, [isAuth])
+    // useEffect(() => {
+    //     if (!isAuth) {
+    //         navigate('/login')
+    //     }
+    // }, [isAuth])
 
 
     const updateTime = () => {

@@ -12,11 +12,11 @@ import {useNavigate} from 'react-router-dom'
 function Dashboard() {
     const navigate = useNavigate()
 
-    useEffect(() => {
-        if (localStorage.getItem('access_token') === null) {
-            navigate('/login')
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (localStorage.getItem('access_token') === null) {
+    //         navigate('/login')
+    //     }
+    // }, [])
 
     return (
         <div className={s.dashboard}>
